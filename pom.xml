@@ -1928,5 +1928,16 @@ under the License.
 			</plugins>
 		</pluginManagement>
 	</build>
-
+	<distributionManagement>
+			<snapshotRepository>
+				<id>fk-art-snapshot</id>
+				<name>libs-snapshot</name>
+				<url>http://artifactory.fkinternal.com/artifactory/v1.0/artifacts/libs-snapshots-local</url>
+			</snapshotRepository>
+			<repository>
+				<id>fk-art-release</id>
+				<name>libs-rel</name>
+				<url>http://artifactory.fkinternal.com/artifactory/v1.0/artifacts/libs-release-local</url>
+			</repository>
+		</distributionManagement>
 </project>
