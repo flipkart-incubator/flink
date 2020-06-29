@@ -158,6 +158,19 @@ under the License.
 		<test.groups></test.groups>
 	</properties>
 
+	<repositories>
+		<repository>
+			<id>fk-art-snapshot</id>
+			<name>Flipkart-Artifactory</name>
+			<url>http://artifactory.fkinternal.com/artifactory/v1.0/artifacts/libs-snapshots-local</url>
+		</repository>
+		<repository>
+			<id>fk-art-release</id>
+			<name>Flipkart-Artifactory</name>
+			<url>http://artifactory.fkinternal.com/artifactory/v1.0/artifacts/libs-release-local</url>
+		</repository>
+	</repositories>
+
 	<dependencies>
 
 		<dependency>
@@ -1054,16 +1067,39 @@ under the License.
 			</activation>
 			<!-- Add vendor maven repositories -->
 			<repositories>
-        			<repository>
-        			    <id>fk-art-snapshot</id>
-        			    <name>Flipkart-Artifactory</name>
-        			    <url>http://artifactory.fkinternal.com/artifactory/v1.0/artifacts/libs-snapshots-local</url>
-        			</repository>
-        			<repository>
-        			    <id>fk-art-release</id>
-        			    <name>Flipkart-Artifactory</name>
-        			    <url>http://artifactory.fkinternal.com/artifactory/v1.0/artifacts/libs-release-local</url>
-        			</repository>
+				<!-- Cloudera -->
+				<repository>
+					<id>cloudera-releases</id>
+					<url>https://repository.cloudera.com/artifactory/cloudera-repos</url>
+					<releases>
+						<enabled>true</enabled>
+					</releases>
+					<snapshots>
+						<enabled>false</enabled>
+					</snapshots>
+				</repository>
+				<!-- Hortonworks -->
+				<repository>
+					<id>HDPReleases</id>
+					<name>HDP Releases</name>
+					<url>https://repo.hortonworks.com/content/repositories/releases/</url>
+					<snapshots><enabled>false</enabled></snapshots>
+					<releases><enabled>true</enabled></releases>
+				</repository>
+				<repository>
+					<id>HortonworksJettyHadoop</id>
+					<name>HDP Jetty</name>
+					<url>https://repo.hortonworks.com/content/repositories/jetty-hadoop</url>
+					<snapshots><enabled>false</enabled></snapshots>
+					<releases><enabled>true</enabled></releases>
+				</repository>
+				<!-- MapR -->
+				<repository>
+					<id>mapr-releases</id>
+					<url>https://repository.mapr.com/maven/</url>
+					<snapshots><enabled>false</enabled></snapshots>
+					<releases><enabled>true</enabled></releases>
+				</repository>
 			</repositories>
 		</profile>
 
